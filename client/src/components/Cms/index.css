@@ -1,0 +1,130 @@
+.cms-page-container {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF7EC 100%);
+    color: #333;
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding-top: 50px; 
+}
+
+.cms-loading{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF7EC 100%);
+}
+
+.cms-content {
+    flex-grow: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF7EC 100%);
+    padding: 30px;
+    max-width: 600px; 
+    width: 100%;
+    margin: 0;
+}
+
+.cms-content h2 {
+    color: #3c3419;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cms-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cms-section h3 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cms-section textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f8f8;
+}
+
+.cms-section textarea.editable {
+    background-color: #fff;
+    border-color: #007bff;
+    color:#000;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.cms-section textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.cms-buttons {
+    text-align: right;
+}
+
+.cms-button {
+    color: white;
+    padding: 15px 35px;
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer; 
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cms-button.edit {
+    background: rgba(255, 189, 89, 1);
+}
+
+.cms-button.edit:hover {
+    background-color: rgb(253, 180, 70);
+    transform: translateY(-1px);
+}
+
+.cms-button.save {
+    background-color: #28a745;
+    color: white;
+}
+
+.cms-button.save:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.cms-button.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cms-button.cancel:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.cms-error {
+    color: #dc3545;
+}
+
+@media (max-width: 767px) {
+    .cms-content {
+        padding: 15px;
+    }
+}
