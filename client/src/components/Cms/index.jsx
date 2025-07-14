@@ -12,7 +12,7 @@ const CMSpage = () => {
     const fetchHeading = async () => {
       setIsLoading(true);
       try {
-        const request = await fetch("https://brynk-labs-beta.vercel.app/api/active-heading");
+        const request = await fetch("https://brynk-labs-kcsn.onrender.com/api/active-heading");
         const response = await request.json();
         setCurrentHeading(response.heading);
         setEditedHeading(response.heading);
@@ -33,7 +33,7 @@ const CMSpage = () => {
 
 
   const handleSaveClick = async () => {
-    const request = await fetch("https://brynk-labs-beta.vercel.app/api/save-heading", {
+    const request = await fetch("https://brynk-labs-kcsn.onrender.com/api/save-heading", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,6 +42,7 @@ const CMSpage = () => {
         heading: editedHeading,
       }),
     });
+    console.log(request)
     if(request.ok){
         toast.success('Heading save successfully')
         setCurrentHeading(editedHeading)

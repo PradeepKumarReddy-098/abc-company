@@ -7,13 +7,13 @@ import "./index.css";
 
 const LandingPage = () => {
   const [heading, setHeading] = useState(
-    "Hyper boost your Revenue Management,Marketing and Commercial Functions with Business Ready AI"
+    "Hyper boost your Revenue Management, Marketing and Commercial Functions with Business Ready AI"
   );
 
   useEffect(() => {
     const fetchHeading = async () => {
       try {
-        const request = await fetch("https://brynk-labs-beta.vercel.app/api/active-heading");
+        const request = await fetch("https://brynk-labs-kcsn.onrender.com/api/active-heading");
         const response = await request.json();
         setHeading(response.heading);
       } catch (error) {

@@ -23,6 +23,7 @@ router.post('/save-heading', (req, res) => {
     }
 
     const query = 'INSERT OR REPLACE INTO headings (id, headingText) VALUES (1, ?)';
+
     db.run(query, [heading], function(err) {
         if (err) {
             console.error('Error:', err.message);
